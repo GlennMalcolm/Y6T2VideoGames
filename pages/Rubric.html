@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Inspection Bureau – Rubric</title>
+
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="../styles/styles.css" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@400;600&family=IBM+Plex+Mono:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-brand">
+      <span class="site-code">DIB-01</span>
+      <h1>Digital Inspection Bureau</h1>
+      <p class="site-subtitle">Social Media Manipulation Rubric</p>
+    </div>
+    <div class="site-status">
+      <span class="status-light status-online"></span>
+      <span class="status-label">RUBRIC MODE</span>
+    </div>
+  </header>
+
+  <nav class="top-nav">
+    <a href="../index.html" class="nav-link">Briefing</a>
+    <a href="tutorials.html" class="nav-link">Tutorials</a>
+    <a href="rubric.html" class="nav-link nav-link-active">Rubric</a>
+    <a href="learning.html" class="nav-link">We Are Learning To</a>
+    <a href="challenge.html" class="nav-link">Challenge</a>
+  </nav>
+
+  <main class="layout layout-full">
+    <section class="layout-main">
+      <article class="card dossier-card">
+        <header class="card-header">
+          <span class="card-code">FORM: SM-SCORE</span>
+          <h2>Manipulation Scorecard (1–5)</h2>
+        </header>
+        <p>
+          For each category, choose a score from <strong>1</strong> (not present)
+          to <strong>5</strong> (overwhelmingly present). When finished, generate
+          a copy-and-paste report to share in Word, Docs, or Teams.
+        </p>
+      </article>
+
+      <table class="rubric-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Question</th>
+            <th>Example</th>
+            <th class="score-column">Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-category-id="1">
+            <td><strong>1. Timing</strong></td>
+            <td>Does the timing feel suspicious or coincidental with other events?</td>
+            <td>A story about water contamination surfaces during a corporate scandal.</td>
+            <td class="score-column">
+              <div class="score-buttons" data-category-id="1">
+                <button type="button" class="score-btn" data-score="1">1</button>
+                <button type="button" class="score-btn" data-score="2">2</button>
+                <button type="button" class="score-btn" data-score="3">3</button>
+                <button type="button" class="score-btn" data-score="4">4</button>
+                <button type="button" class="score-btn" data-score="5">5</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr data-category-id="2">
+            <td><strong>2. Emotional Manipulation</strong></td>
+            <td>Does it provoke fear, outrage, or guilt without solid evidence?</td>
+            <td>Reports show crying children and dying wildlife but avoid clear causes.</td>
+            <td class="score-column">
+              <div class="score-buttons" data-category-id="2">
+                <button type="button" class="score-btn" data-score="1">1</button>
+                <button type="button" class="score-btn" data-score="2">2</button>
+                <button type="button" class="score-btn" data-score="3">3</button>
+                <button type="button" class="score-btn" data-score="4">4</button>
+                <button type="button" class="score-btn" data-score="5">5</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr data-category-id="3">
+            <td><strong>3. Uniform Messaging</strong></td>
+            <td>Are key phrases or ideas repeated across media?</td>
+            <td>Many outlets use terms like “unprecedented” and “avoidable tragedy”.</td>
+            <td class="score-column">
+              <div class="score-buttons" data-category-id="3">
+                <button type="button" class="score-btn" data-score="1">1</button>
+                <button type="button" class="score-btn" data-score="2">2</button>
+                <button type="button" class="score-btn" data-score="3">3</button>
+                <button type="button" class="score-btn" data-score="4">4</button>
+                <button type="button" class="score-btn" data-score="5">5</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr data-category-id="4">
+            <td><strong>4. Missing Information</strong></td>
+            <td>Are alternative views or critical details excluded?</td>
+            <td>Few sources discuss the timeline or other possible contributors.</td>
+            <td class="score-column">
+              <div class="score-buttons" data-category-id="4">
+                <button type="button" class="score-btn" data-score="1">1</button>
+                <button type="button" class="score-btn" data-score="2">2</button>
+                <button type="button" class="score-btn" data-score="3">3</button>
+                <button type="button" class="score-btn" data-score="4">4</button>
+                <button type="button" class="score-btn" data-score="5">5</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr data-category-id="5">
+            <td><strong>5. Simplistic Narratives</strong></td>
+            <td>Is the story reduced to “good vs. evil” frameworks?</td>
+            <td>Blames one company entirely while ignoring systemic issues.</td>
+            <td class="score-column">
+              <div class="score-buttons" data-category-id="5">
+                <button type="button" class="score-btn" data-score="1">1</button>
+                <button type="button" class="score-btn" data-score="2">2</button>
+                <button type="button" class="score-btn" data-score="3">3</button>
+                <button type="button" class="score-btn" data-score="4">4</button>
+                <button type="button" class="score-btn" data-score="5">5</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr data-category-id="6">
+            <td><strong>6. Tribal Division</strong></td>
+            <td>Does it create an “us vs. them” dynamic?</td>
+            <td>Locals are victims, while outsiders are blamed.</td>
+            <td class="score-column">
+              <div class="score-buttons" data-category-id="6">
+                <button type="button" class="score-btn" data-score="1">1</button>
+                <button type="button" class="score-btn" data-score="2">2</button>
+                <button type="button" class="score-btn" data-score="3">3</button>
+                <button type="button" class="score-btn" data-score="4">4</button>
+                <button type="button" class="score-btn" data-score="5">5</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr data-category-id="7">
+            <td><strong>7. Authority Overload</strong></td>
+            <td>Are questionable “experts” driving the narrative?</td>
+            <td>Non-environmental experts dominate airtime to support policies.</td>
+            <td class="score-column">
+              <div class="score-buttons" data-category-id="7">
+                <button type="button" class="score-btn" data-score="1">1</button>
+                <button type="button" class="score-btn" data-score="2">2</button>
+                <button type="button" class="score-btn" data-score="3">3</button>
+                <button type="button" class="score-btn" data-score="4">4</button>
+                <button type="button" class="score-btn" data-score="5">5</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr data-category-id="8">
+            <td><strong>8. Call for Urgent Action</strong></td>
+            <td>Does it demand immediate decisions without reflection?</td>
+            <td>Campaigns push for immediate donations and rapid policy changes.</td>
+            <td class="score-column">
+              <div class="score-buttons" data-category-id="8">
+                <button type="button" class="score-btn" data-score="1">1</button>
+                <button type="button" class="score-btn" data-score="2">2</button>
+                <button type="button" class="score-btn" data-score="3">3</button>
+                <button type="button" class="score-btn" data-score="4">4</button>
+                <button type="button" class="score-btn" data-score="5">5</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr data-category-id="9">
+            <td><strong>9. Overuse of Novelty</strong></td>
+            <td>Is the event framed as shocking or unprecedented?</td>
+            <td>Media emphasises how “shocking” and “once-in-a-lifetime” the crisis is.</td>
+            <td class="score-column">
+              <div class="score-buttons" data-category-id="9">
+                <button type="button" class="score-btn" data-score="1">1</button>
+                <button type="button" class="score-btn" data-score="2">2</button>
+                <button type="button" class="score-btn" data-score="3">3</button>
+                <button type="button" class="score-btn" data-score="4">4</button>
+                <button type="button" class="score-btn" data-score="5">5</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr data-category-id="10">
+            <td><strong>10. Financial / Political Gain</strong></td>
+            <td>Do powerful groups benefit disproportionately?</td>
+            <td>A company offering cleanup services lobbies for government contracts.</td>
+            <td class="score-column">
+              <div class="score-buttons" data-category-id="10">
+                <button type="button" class="score-btn" data-score="1">1</button>
+                <button type="button" class="score-btn" data-score="2">2</button>
+                <button type="button" class="score-btn" data-score="3">3</button>
+                <button type="button" class="score-btn" data-score="4">4</button>
+                <button type="button" class="score-btn" data-score="5">5</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr data-category-id="11">
+            <td><strong>11. Suppression of Dissent</strong></td>
+            <td>Are critics silenced or labelled negatively?</td>
+            <td>Opponents are dismissed as “deniers” or ignored.</td>
+            <td class="score-column">
+              <div class="score-buttons" data-category-id="11">
+                <button type="button" class="score-btn" data-score="1">1</button>
+                <button type="button" class="score-btn" data-score="2">2</button>
+                <button type="button" class="score-btn" data-score="3">3</button>
+                <button type="button" class="score-btn" data-score="4">4</button>
+                <button type="button" class="score-btn" data-score="5">5</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr data-category-id="12">
+            <td><strong>12. False Dilemmas</strong></td>
+            <td>Are only two extreme options presented?</td>
+            <td>“Either you support this policy, or you don’t care about the environment.”</td>
+            <td class="score-column">
+              <div class="score-buttons" data-category-id="12">
+                <button type="button" class="score-btn" data-score="1">1</button>
+                <button type="button" class="score-btn" data-score="2">2</button>
+                <button type="button" class="score-btn" data-score="3">3</button>
+                <button type="button" class="score-btn" data-score="4">4</button>
+                <button type="button" class="score-btn" data-score="5">5</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr data-category-id="13">
+            <td><strong>13. Bandwagon Effect</strong></td>
+            <td>Is there pressure to conform because “everyone is doing it”?</td>
+            <td>Influencers post identical hashtags, urging followers to join in.</td>
+            <td class="score-column">
+              <div class="score-buttons" data-category-id="13">
+                <button type="button" class="score-btn" data-score="1">1</button>
+                <button type="button" class="score-btn" data-score="2">2</button>
+                <button type="button" class="score-btn" data-score="3">3</button>
+                <button type="button" class="score-btn" data-score="4">4</button>
+                <button type="button" class="score-btn" data-score="5">5</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr data-category-id="14">
+            <td><strong>14. Emotional Repetition</strong></td>
+            <td>Are the same emotional triggers repeated excessively?</td>
+            <td>Destruction and suffering imagery looped endlessly on TV and online.</td>
+            <td class="score-column">
+              <div class="score-buttons" data-category-id="14">
+                <button type="button" class="score-btn" data-score="1">1</button>
+                <button type="button" class="score-btn" data-score="2">2</button>
+                <button type="button" class="score-btn" data-score="3">3</button>
+                <button type="button" class="score-btn" data-score="4">4</button>
+                <button type="button" class="score-btn" data-score="5">5</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr data-category-id="15">
+            <td><strong>15. Cherry-Picked Data</strong></td>
+            <td>Are statistics presented selectively or out of context?</td>
+            <td>Dramatic figures shared without explaining how they were calculated.</td>
+            <td class="score-column">
+              <div class="score-buttons" data-category-id="15">
+                <button type="button" class="score-btn" data-score="1">1</button>
+                <button type="button" class="score-btn" data-score="2">2</button>
+                <button type="button" class="score-btn" data-score="3">3</button>
+                <button type="button" class="score-btn" data-score="4">4</button>
+                <button type="button" class="score-btn" data-score="5">5</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr data-category-id="16">
+            <td><strong>16. Logical Fallacies</strong></td>
+            <td>Are flawed arguments used to dismiss critics?</td>
+            <td>Critics are labelled “out-of-touch elites” without addressing their points.</td>
+            <td class="score-column">
+              <div class="score-buttons" data-category-id="16">
+                <button type="button" class="score-btn" data-score="1">1</button>
+                <button type="button" class="score-btn" data-score="2">2</button>
+                <button type="button" class="score-btn" data-score="3">3</button>
+                <button type="button" class="score-btn" data-score="4">4</button>
+                <button type="button" class="score-btn" data-score="5">5</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr data-category-id="17">
+            <td><strong>17. Manufactured Outrage</strong></td>
+            <td>Does outrage seem sudden or disconnected from facts?</td>
+            <td>Viral memes escalate anger quickly with little context provided.</td>
+            <td class="score-column">
+              <div class="score-buttons" data-category-id="17">
+                <button type="button" class="score-btn" data-score="1">1</button>
+                <button type="button" class="score-btn" data-score="2">2</button>
+                <button type="button" class="score-btn" data-score="3">3</button>
+                <button type="button" class="score-btn" data-score="4">4</button>
+                <button type="button" class="score-btn" data-score="5">5</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr data-category-id="18">
+            <td><strong>18. Framing Techniques</strong></td>
+            <td>Is the story shaped to control how you perceive it?</td>
+            <td>The crisis is framed as entirely preventable, ignoring systemic factors.</td>
+            <td class="score-column">
+              <div class="score-buttons" data-category-id="18">
+                <button type="button" class="score-btn" data-score="1">1</button>
+                <button type="button" class="score-btn" data-score="2">2</button>
+                <button type="button" class="score-btn" data-score="3">3</button>
+                <button type="button" class="score-btn" data-score="4">4</button>
+                <button type="button" class="score-btn" data-score="5">5</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr data-category-id="19">
+            <td><strong>19. Rapid Behaviour Shifts</strong></td>
+            <td>Are groups adopting symbols or actions without clear reasoning?</td>
+            <td>Social media fills with users adding water droplet emojis to profiles.</td>
+            <td class="score-column">
+              <div class="score-buttons" data-category-id="19">
+                <button type="button" class="score-btn" data-score="1">1</button>
+                <button type="button" class="score-btn" data-score="2">2</button>
+                <button type="button" class="score-btn" data-score="3">3</button>
+                <button type="button" class="score-btn" data-score="4">4</button>
+                <button type="button" class="score-btn" data-score="5">5</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr data-category-id="20">
+            <td><strong>20. Historical Parallels</strong></td>
+            <td>Does the story mirror manipulative past events?</td>
+            <td>Past crises were used similarly to pass sweeping, controversial legislation.</td>
+            <td class="score-column">
+              <div class="score-buttons" data-category-id="20">
+                <button type="button" class="score-btn" data-score="1">1</button>
+                <button type="button" class="score-btn" data-score="2">2</button>
+                <button type="button" class="score-btn" data-score="3">3</button>
+                <button type="button" class="score-btn" data-score="4">4</button>
+                <button type="button" class="score-btn" data-score="5">5</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <section class="card">
+        <header class="card-header">
+          <span class="card-code">TOTAL</span>
+          <h3>Score Summary</h3>
+        </header>
+
+        <p>
+          Normalised total score:
+          <strong><span id="totalScore">0</span> / 100</strong>
+        </p>
+
+        <p>
+          Interpretation:
+          <strong><span id="scoreInterpretation">No scores selected yet.</span></strong>
+        </p>
+
+        <button type="button" class="stamp-button" id="exportTextBtn">
+          Generate Report Text
+        </button>
+
+        <p class="small mono" style="margin-top: 0.75rem;">
+          Copy this text and paste it into Word, Google Docs, or your assignment.
+        </p>
+
+        <textarea id="reportOutput" class="json-output" readonly></textarea>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span class="mono">RUBRIC · SCORE → DISCUSS → APPLY IN GAME</span>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const scores = {}; // { categoryId: score }
+
+      const scoreButtons = document.querySelectorAll(".score-btn");
+      const totalScoreEl = document.getElementById("totalScore");
+      const interpretationEl = document.getElementById("scoreInterpretation");
+      const exportBtn = document.getElementById("exportTextBtn");
+      const reportOutputEl = document.getElementById("reportOutput");
+
+      function interpretScore(score) {
+        if (score <= 25) return "Low likelihood of manipulation.";
+        if (score <= 50) return "Moderate likelihood – look deeper.";
+        if (score <= 75) return "Strong likelihood – manipulation likely.";
+        return "Overwhelming signs of manipulation.";
+      }
+
+      function updateTotals() {
+        const rows = document.querySelectorAll(".rubric-table tbody tr");
+        let total = 0;
+        let categoryCount = 0;
+
+        rows.forEach((row, index) => {
+          const categoryId = row.getAttribute("data-category-id") || (index + 1).toString();
+          const value = scores[categoryId];
+          if (typeof value === "number") total += value;
+          categoryCount += 1;
+        });
+
+        if (categoryCount === 0) {
+          totalScoreEl.textContent = "0";
+          interpretationEl.textContent = "No categories found.";
+          return;
+        }
+
+        const maxScore = categoryCount * 5;
+        const normalised = Math.round((total / maxScore) * 100);
+
+        totalScoreEl.textContent = normalised.toString();
+        interpretationEl.textContent = interpretScore(normalised);
+      }
+
+      function clearButtonSelection(container) {
+        container.querySelectorAll(".score-btn").forEach(btn => {
+          btn.classList.remove("score-btn-selected");
+        });
+      }
+
+      scoreButtons.forEach(btn => {
+        btn.addEventListener("click", function () {
+          const container = this.closest(".score-buttons");
+          if (!container) return;
+
+          const categoryId = container.getAttribute("data-category-id");
+          const score = parseInt(this.getAttribute("data-score"), 10);
+
+          if (!categoryId || Number.isNaN(score)) return;
+
+          scores[categoryId] = score;
+
+          clearButtonSelection(container);
+          this.classList.add("score-btn-selected");
+
+          updateTotals();
+        });
+      });
+
+      exportBtn.addEventListener("click", function () {
+        const rows = document.querySelectorAll(".rubric-table tbody tr");
+        const lines = [];
+
+        const now = new Date();
+        lines.push("DIGITAL INSPECTION REPORT");
+        lines.push("Generated: " + now.toLocaleString());
+        lines.push("");
+
+        let total = 0;
+        let categoryCount = 0;
+
+        rows.forEach((row, index) => {
+          const categoryId = row.getAttribute("data-category-id") || (index + 1).toString();
+
+          const categoryCell = row.querySelector("td:nth-child(1)");
+          const questionCell = row.querySelector("td:nth-child(2)");
+
+          const categoryName = categoryCell ? categoryCell.textContent.trim() : ("Category " + categoryId);
+          const question = questionCell ? questionCell.textContent.trim() : "";
+          const scoreValue = (typeof scores[categoryId] === "number") ? scores[categoryId] : 0;
+
+          total += scoreValue;
+          categoryCount += 1;
+
+          lines.push(categoryName + " – Score: " + scoreValue + "/5");
+          if (question) lines.push("  Question: " + question);
+          lines.push("");
+        });
+
+        if (categoryCount > 0) {
+          const maxScore = categoryCount * 5;
+          const normalised = Math.round((total / maxScore) * 100);
+          lines.push("Total Score: " + normalised + "/100");
+          lines.push("Interpretation: " + interpretScore(normalised));
+        } else {
+          lines.push("No categories found.");
+        }
+
+        reportOutputEl.value = lines.join("\n");
+        reportOutputEl.focus();
+        reportOutputEl.select();
+      });
+
+      // Initialise totals on load
+      updateTotals();
+    });
+  </script>
+</body>
+</html>

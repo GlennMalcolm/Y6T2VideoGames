@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Inspection Bureau – Tutorials</title>
+
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="../styles/styles.css" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@400;600&family=IBM+Plex+Mono:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-brand">
+      <span class="site-code">DIB-01</span>
+      <h1>Digital Inspection Bureau</h1>
+      <p class="site-subtitle">MakeCode Arcade Training</p>
+    </div>
+    <div class="site-status">
+      <span class="status-light status-online"></span>
+      <span class="status-label">TUTORIAL MODE</span>
+    </div>
+  </header>
+
+  <nav class="top-nav">
+    <a href="../index.html" class="nav-link">Briefing</a>
+    <a href="tutorials.html" class="nav-link nav-link-active">Tutorials</a>
+    <a href="rubric.html" class="nav-link">Rubric</a>
+    <a href="learning.html" class="nav-link">We Are Learning To</a>
+    <a href="challenge.html" class="nav-link">Challenge</a>
+  </nav>
+
+  <main class="layout">
+    <section class="layout-main">
+      <article class="card dossier-card">
+        <header class="card-header">
+          <span class="card-code">TRACK: MC-ARC</span>
+          <h2>Tutorial Sequence</h2>
+        </header>
+        <p>
+          Follow this structured sequence to build a
+          <strong>Papers, Please–style inspection game</strong> using
+          <strong>MakeCode Arcade</strong>. Each step introduces one clear
+          mechanic that you will later combine into a complete game.
+        </p>
+      </article>
+
+      <ol class="tutorial-list">
+        <li class="card tutorial-card">
+          <header class="card-header">
+            <span class="card-code">STEP 01</span>
+            <h3>Inspector & Office</h3>
+          </header>
+          <p>
+            Create your inspector character and a simple office or checkpoint
+            setting. Add basic movement so the inspector can move between areas
+            such as the story desk and the approval stamp.
+          </p>
+          <p class="mono small">
+            Skills: Sprites · Controller movement · Basic tilemaps
+          </p>
+        </li>
+
+        <li class="card tutorial-card">
+          <header class="card-header">
+            <span class="card-code">STEP 02</span>
+            <h3>Story Cards & Dialogue</h3>
+          </header>
+          <p>
+            Display incoming “story cards” based on headlines or posts. Use
+            dialogue or on-screen text so players can read the story before
+            making a decision.
+          </p>
+          <p class="mono small">
+            Skills: Overlap events · On-screen text · Simple dialogue
+          </p>
+        </li>
+
+        <li class="card tutorial-card">
+          <header class="card-header">
+            <span class="card-code">STEP 03</span>
+            <h3>Rubric Checks</h3>
+          </header>
+          <p>
+            Turn selected rubric questions into game logic. For example, if a
+            story uses extreme emotional language or missing information,
+            increase a manipulation score.
+          </p>
+          <p class="mono small">
+            Skills: Variables · If / else logic · Score tracking
+          </p>
+        </li>
+
+        <li class="card tutorial-card">
+          <header class="card-header">
+            <span class="card-code">STEP 04</span>
+            <h3>Approve / Flag Decisions</h3>
+          </header>
+          <p>
+            Add player controls to <strong>APPROVE</strong> or
+            <strong>FLAG</strong> a story. Link the outcome to the rubric logic
+            so good decisions are rewarded and weak decisions are challenged.
+          </p>
+          <p class="mono small">
+            Skills: Controller input · Feedback text · Sound effects
+          </p>
+        </li>
+
+        <li class="card tutorial-card">
+          <header class="card-header">
+            <span class="card-code">STEP 05</span>
+            <h3>Multiple Stories & Endings</h3>
+          </header>
+          <p>
+            Create several inspection rounds. End the game with a summary that
+            comments on how carefully the player applied the rules, not just how
+            fast they finished.
+          </p>
+          <p class="mono small">
+            Skills: Arrays or lists · Game states · Multiple endings
+          </p>
+        </li>
+      </ol>
+
+      <section class="card">
+        <header class="card-header">
+          <span class="card-code">MAKECODE</span>
+          <h3>Project Link</h3>
+        </header>
+        <p>
+          When ready, paste or embed your MakeCode Arcade project link below.
+        </p>
+        <div class="evidence-screen">
+          <p class="mono small">
+            Example:<br />
+            https://arcade.makecode.com/XXXX-XXXX-XXXX
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <aside class="layout-side">
+      <section class="card">
+        <header class="card-header">
+          <span class="card-code">CHECK</span>
+          <h3>Testing Checklist</h3>
+        </header>
+        <ul class="bullet-list">
+          <li>Is it clear what the player is inspecting?</li>
+          <li>Do choices have visible consequences?</li>
+          <li>Are rubric rules reflected in the game logic?</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <header class="card-header">
+          <span class="card-code">TEAMWORK</span>
+          <h3>Working in Pairs</h3>
+        </header>
+        <p>
+          Split responsibilities between <strong>coding</strong>,
+          <strong>story design</strong>, and <strong>testing</strong>. Swap roles
+          regularly to keep decisions shared.
+        </p>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <span class="mono">TUTORIALS · BUILD → TEST → REFINE</span>
+  </footer>
+</body>
+</html>

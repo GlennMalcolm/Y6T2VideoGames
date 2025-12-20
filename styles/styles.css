@@ -1,0 +1,422 @@
+/* =========================
+   Digital Inspection Bureau
+   Shared Stylesheet
+   Path: /styles/styles.css
+   ========================= */
+
+/* Base reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Palette */
+  --bg: #1c1f23;
+  --bg-2: #171a1e;
+  --nav: #14171b;
+  --paper: #f4f0e6;
+  --ink: #1c1f23;
+  --green: #3e5f4a;
+  --maroon: #7c3b3b;
+  --amber: #d4a017;
+  --grey: #b4b4b4;
+  --paper-dark: #d8d2c1;
+
+  /* Layout */
+  --container-pad: 1.5rem;
+  --radius: 2px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--paper);
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Oswald", system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 0.4rem;
+}
+
+p {
+  margin: 0 0 0.75rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  margin-bottom: 3rem;
+}
+
+/* Utility */
+.mono {
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+
+.small {
+  font-size: 0.85rem;
+}
+
+/* =========================
+   Header / Status
+   ========================= */
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1rem var(--container-pad);
+  border-bottom: 1px solid var(--green);
+  background: var(--bg-2);
+}
+
+.site-brand h1 {
+  font-size: 1.3rem;
+}
+
+.site-subtitle {
+  font-size: 0.85rem;
+  color: var(--grey);
+}
+
+.site-code {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--maroon);
+  display: inline-block;
+  margin-bottom: 0.1rem;
+}
+
+.site-status {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--grey);
+}
+
+.status-light {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  display: inline-block;
+  border: 1px solid #0f2018;
+}
+
+.status-online {
+  background: var(--green);
+}
+
+/* =========================
+   Navigation
+   ========================= */
+
+.top-nav {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.5rem var(--container-pad);
+  border-bottom: 1px solid var(--green);
+  background: var(--nav);
+  overflow-x: auto;
+}
+
+.nav-link {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  border-color: var(--green);
+}
+
+.nav-link-active {
+  border-color: var(--maroon);
+  background: rgba(124, 59, 59, 0.15);
+}
+
+/* =========================
+   Layout
+   ========================= */
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 1.4fr);
+  gap: 1.5rem;
+  padding: var(--container-pad);
+}
+
+.layout-full {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.layout-main,
+.layout-side {
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .layout,
+  .layout-full {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   Cards
+   ========================= */
+
+.card {
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--green);
+  padding: 1.25rem 1.25rem 1.4rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 0 1px var(--bg);
+  border-radius: var(--radius);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.6rem;
+  gap: 0.75rem;
+}
+
+.card-header h2,
+.card-header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.card-code {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--maroon);
+}
+
+.dossier-card {
+  border-style: double;
+  border-width: 3px;
+  border-color: var(--green);
+}
+
+/* =========================
+   Buttons / Stamps
+   ========================= */
+
+.stamp-button {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1.1rem;
+  border: 2px solid var(--maroon);
+  background: transparent;
+  color: var(--maroon);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  cursor: pointer;
+  border-radius: var(--radius);
+}
+
+.stamp-button:hover {
+  background: var(--maroon);
+  color: var(--paper);
+  transform: translateY(-1px);
+}
+
+.stamp-box {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.35rem 0.8rem;
+  border: 2px solid var(--maroon);
+  transform: rotate(-2deg);
+  border-radius: var(--radius);
+}
+
+.stamp-label {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--maroon);
+}
+
+/* =========================
+   Evidence Screen
+   ========================= */
+
+.evidence-card {
+  background: #111315;
+  color: var(--paper);
+  border-color: var(--green);
+}
+
+.evidence-caption {
+  font-size: 0.85rem;
+  color: #d0cec4;
+}
+
+.evidence-screen {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid var(--green);
+  background: #050607;
+}
+
+/* =========================
+   Lists / Grids
+   ========================= */
+
+.bullet-list {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.bullet-list li {
+  margin-bottom: 0.35rem;
+}
+
+.bullet-list.numbered {
+  list-style: decimal;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* =========================
+   Tutorials
+   ========================= */
+
+.tutorial-list {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.tutorial-card {
+  margin-bottom: 0.75rem;
+}
+
+/* =========================
+   Rubric Table
+   ========================= */
+
+.rubric-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.rubric-table th,
+.rubric-table td {
+  border: 1px solid var(--green);
+  padding: 0.5rem 0.6rem;
+  vertical-align: top;
+}
+
+.rubric-table th {
+  background: var(--paper-dark);
+  font-weight: 600;
+  text-align: left;
+}
+
+.score-column {
+  width: 120px;
+  text-align: center;
+}
+
+/* Score buttons */
+.score-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.score-btn {
+  min-width: 1.8rem;
+  padding: 0.2rem 0;
+  border-radius: 3px;
+  border: 1px solid var(--green);
+  background: var(--paper);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.score-btn:hover {
+  background: var(--paper-dark);
+}
+
+.score-btn-selected {
+  background: var(--maroon);
+  border-color: var(--maroon);
+  color: var(--paper);
+}
+
+/* Output text area (reuses previous class name for convenience) */
+.json-output {
+  width: 100%;
+  min-height: 160px;
+  margin-top: 0.4rem;
+  padding: 0.6rem;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.85rem;
+  background: #050607;
+  color: var(--paper);
+  border: 1px solid var(--green);
+  resize: vertical;
+  border-radius: var(--radius);
+}
+
+/* =========================
+   Footer
+   ========================= */
+
+.site-footer {
+  border-top: 1px solid var(--green);
+  padding: 0.75rem var(--container-pad) 1.2rem;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grey);
+}
