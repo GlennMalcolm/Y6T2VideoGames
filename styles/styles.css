@@ -541,3 +541,39 @@ main {
   border-bottom: 1px solid rgba(62, 95, 74, 0.35);
   margin-bottom: 0.5rem;
 }
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  background: #050607;
+  border: 1px solid var(--green);
+  margin-top: 0.75rem;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.65)
+  );
+}
+
+.video-stamp {
+  border: 2px solid var(--maroon);
+  padding: 0.6rem 1.2rem;
+  font-family: "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--maroon);
+  background: rgba(124, 59, 59, 0.08);
+}
+
+.video-overlay:hover .video-stamp {
+  background: var(--maroon);
+  color: var(--paper);
+}
