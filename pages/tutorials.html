@@ -79,7 +79,38 @@
     });
   });
 </script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const STORAGE_KEY = "dib_tutorial_last_step";
+    const detailsList = Array.from(document.querySelectorAll(".tutorial-details"));
 
+    // Give each <details> a stable id if it doesn't have one
+    detailsList.forEach((d, i) => {
+      if (!d.id) d.id = `tutorial-step-${String(i + 1).padStart(2, "0")}`;
+    });
+
+    // Restore last opened step
+    const savedId = localStorage.getItem(STORAGE_KEY);
+    if (savedId) {
+      const target = document.getElementById(savedId);
+      if (target) {
+        // Close others (optional but usually desired)
+        detailsList.forEach(d => { d.open = false; });
+
+        // Open saved and scroll to it
+        target.open = true;
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    // Save when a step is opened
+    detailsList.forEach(d => {
+      d.addEventListener("toggle", () => {
+        if (d.open) localStorage.setItem(STORAGE_KEY, d.id);
+      });
+    });
+  });
+</script>
 
 
 <body>
