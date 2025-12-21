@@ -473,3 +473,71 @@ main {
   width: 0%;
   background: var(--maroon);
 }
+/* Expandable tutorial cards */
+.tutorial-details {
+  margin: 0;
+}
+
+.tutorial-summary {
+  list-style: none; /* removes default marker in some browsers */
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.tutorial-summary::-webkit-details-marker {
+  display: none; /* removes default triangle in Chrome/Safari */
+}
+
+.tutorial-tag {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--green);
+  border-radius: var(--radius);
+  background: rgba(62, 95, 74, 0.10);
+  color: var(--maroon);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+}
+
+.tutorial-title {
+  font-family: "Oswald", system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 1rem;
+}
+
+.tutorial-hint {
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.tutorial-body {
+  margin-top: 0.9rem;
+}
+
+.tutorial-subhead {
+  margin: 0.75rem 0 0.35rem;
+  font-family: "Oswald", system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.95rem;
+}
+
+.tutorial-rule {
+  border: 0;
+  border-top: 1px solid var(--green);
+  margin: 0.9rem 0;
+  opacity: 0.6;
+}
+
+/* Optional: slightly emphasise the open state */
+.tutorial-details[open] .tutorial-summary {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(62, 95, 74, 0.35);
+  margin-bottom: 0.5rem;
+}
