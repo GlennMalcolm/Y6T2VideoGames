@@ -30,6 +30,25 @@
     });
   });
 </script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".video-wrapper").forEach(wrapper => {
+      wrapper.addEventListener("click", () => {
+        const id = wrapper.dataset.videoId;
+        wrapper.innerHTML = `
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&modestbranding=1&rel=0"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+            style="position:absolute; inset:0; width:100%; height:100%;">
+          </iframe>
+        `;
+      }, { once: true });
+    });
+  });
+</script>
+
 
 <body>
   <header class="site-header">
@@ -68,196 +87,260 @@
       </article>
 
  <ol class="tutorial-list">
+
+  <!-- STEP 01 -->
   <li class="card tutorial-card">
     <details class="tutorial-details">
       <summary class="tutorial-summary">
         <span class="tutorial-tag mono">STEP 01</span>
-        <span class="tutorial-title">Inspector & Office</span>
+        <span class="tutorial-title">Game Space & Player Control</span>
         <span class="tutorial-hint mono small">Click to expand</span>
       </summary>
 
       <div class="tutorial-body">
         <p>
-          Create your inspector character and a simple office or checkpoint
-          setting. Add basic movement so the inspector can move between areas
-          such as the story desk and the approval stamp.
+          Set up the game space and give the player control of a character.
+          This defines how the player moves and interacts with the game world.
         </p>
 
         <p class="mono small">
-          Skills: Sprites · Controller movement · Basic tilemaps
+          Skills: Sprites · Controller input · Tilemaps
         </p>
+
+        <section class="tutorial-video">
+          <h4 class="tutorial-subhead">Video</h4>
+          <div class="video-wrapper" data-video-id="YOUTUBE_ID_STEP_01"></div>
+        </section>
 
         <hr class="tutorial-rule" />
 
         <h4 class="tutorial-subhead">Build Steps</h4>
         <ol class="bullet-list numbered">
-          <li>Create an inspector sprite.</li>
-          <li>Add controller movement (left/right/up/down).</li>
-          <li>Build a simple tilemap (desk, stamp area, exit).</li>
-          <li>Add collision walls to stop walking through desks.</li>
-          <li>Test movement and adjust speed.</li>
+          <li>Create a player sprite.</li>
+          <li>Add movement using the controller.</li>
+          <li>Design a simple game space.</li>
+          <li>Add walls or boundaries.</li>
         </ol>
-
-        <h4 class="tutorial-subhead">Checkpoint</h4>
-        <ul class="bullet-list">
-          <li>The inspector moves smoothly.</li>
-          <li>The office feels like a “work station”.</li>
-        </ul>
       </div>
     </details>
   </li>
 
+  <!-- STEP 02 -->
   <li class="card tutorial-card">
     <details class="tutorial-details">
       <summary class="tutorial-summary">
         <span class="tutorial-tag mono">STEP 02</span>
-        <span class="tutorial-title">Story Cards & Dialogue</span>
+        <span class="tutorial-title">Objects & Interaction</span>
         <span class="tutorial-hint mono small">Click to expand</span>
       </summary>
 
       <div class="tutorial-body">
         <p>
-          Display incoming “story cards” based on headlines or posts. Use
-          dialogue or on-screen text so players can read the story before
-          making a decision.
+          Introduce objects the player can interact with. These will later
+          become the core items used in the game.
         </p>
 
         <p class="mono small">
-          Skills: Overlap events · On-screen text · Simple dialogue
+          Skills: Sprites · Overlap events · Triggers
         </p>
+
+        <section class="tutorial-video">
+          <h4 class="tutorial-subhead">Video</h4>
+          <div class="video-wrapper" data-video-id="YOUTUBE_ID_STEP_02"></div>
+        </section>
 
         <hr class="tutorial-rule" />
 
         <h4 class="tutorial-subhead">Build Steps</h4>
         <ol class="bullet-list numbered">
-          <li>Create a “story card” sprite (paper icon).</li>
-          <li>When the inspector overlaps the card, show text/dialogue.</li>
-          <li>Store the current story text in a variable.</li>
-          <li>Add a “next story” trigger (button press).</li>
+          <li>Create an object sprite.</li>
+          <li>Detect when the player touches it.</li>
+          <li>Trigger an action or message.</li>
         </ol>
-
-        <h4 class="tutorial-subhead">Checkpoint</h4>
-        <ul class="bullet-list">
-          <li>The player can reliably read the story.</li>
-          <li>The story appears only when triggered.</li>
-        </ul>
       </div>
     </details>
   </li>
 
+  <!-- STEP 03 -->
   <li class="card tutorial-card">
     <details class="tutorial-details">
       <summary class="tutorial-summary">
         <span class="tutorial-tag mono">STEP 03</span>
-        <span class="tutorial-title">Rubric Checks</span>
+        <span class="tutorial-title">Information on Screen</span>
         <span class="tutorial-hint mono small">Click to expand</span>
       </summary>
 
       <div class="tutorial-body">
         <p>
-          Turn selected rubric questions into game logic. For example, if a
-          story uses extreme emotional language or missing information,
-          increase a manipulation score.
+          Display information clearly on screen so the player knows what is
+          happening and what they are deciding.
         </p>
 
         <p class="mono small">
-          Skills: Variables · If / else logic · Score tracking
+          Skills: Text · Dialogue · Variables
         </p>
+
+        <section class="tutorial-video">
+          <h4 class="tutorial-subhead">Video</h4>
+          <div class="video-wrapper" data-video-id="YOUTUBE_ID_STEP_03"></div>
+        </section>
 
         <hr class="tutorial-rule" />
 
         <h4 class="tutorial-subhead">Build Steps</h4>
         <ol class="bullet-list numbered">
-          <li>Create a variable: <span class="mono">manipulationScore</span>.</li>
-          <li>When a story is shown, set the score to 0.</li>
-          <li>Add 1–3 checks (e.g., urgency, missing info, outrage).</li>
-          <li>Increase the score when checks are present.</li>
+          <li>Show text when an object is activated.</li>
+          <li>Store text in a variable.</li>
+          <li>Control when text appears and disappears.</li>
         </ol>
-
-        <h4 class="tutorial-subhead">Checkpoint</h4>
-        <ul class="bullet-list">
-          <li>Score changes based on the story type.</li>
-          <li>The rules match the rubric language.</li>
-        </ul>
       </div>
     </details>
   </li>
 
+  <!-- STEP 04 -->
   <li class="card tutorial-card">
     <details class="tutorial-details">
       <summary class="tutorial-summary">
         <span class="tutorial-tag mono">STEP 04</span>
-        <span class="tutorial-title">Approve / Flag Decisions</span>
+        <span class="tutorial-title">Rules & Conditions</span>
         <span class="tutorial-hint mono small">Click to expand</span>
       </summary>
 
       <div class="tutorial-body">
         <p>
-          Add player controls to <strong>APPROVE</strong> or
-          <strong>FLAG</strong> a story. Link the outcome to the rubric logic
-          so good decisions are rewarded and weak decisions are challenged.
+          Add rules that check what is happening in the game and respond
+          differently depending on conditions.
         </p>
 
         <p class="mono small">
-          Skills: Controller input · Feedback text · Sound effects
+          Skills: Variables · If / else logic
         </p>
+
+        <section class="tutorial-video">
+          <h4 class="tutorial-subhead">Video</h4>
+          <div class="video-wrapper" data-video-id="YOUTUBE_ID_STEP_04"></div>
+        </section>
 
         <hr class="tutorial-rule" />
 
         <h4 class="tutorial-subhead">Build Steps</h4>
         <ol class="bullet-list numbered">
-          <li>Choose buttons (e.g., A=Approve, B=Flag).</li>
-          <li>If score is high and player approves, show “Incorrect”.</li>
-          <li>If score is high and player flags, show “Correct”.</li>
-          <li>Add a stamp sound and a brief animation.</li>
+          <li>Create a rule using an if statement.</li>
+          <li>Check a value or condition.</li>
+          <li>Trigger different outcomes.</li>
         </ol>
-
-        <h4 class="tutorial-subhead">Checkpoint</h4>
-        <ul class="bullet-list">
-          <li>Every decision produces feedback.</li>
-          <li>The player understands why it was correct/incorrect.</li>
-        </ul>
       </div>
     </details>
   </li>
 
+  <!-- STEP 05 -->
   <li class="card tutorial-card">
     <details class="tutorial-details">
       <summary class="tutorial-summary">
         <span class="tutorial-tag mono">STEP 05</span>
-        <span class="tutorial-title">Multiple Stories & Endings</span>
+        <span class="tutorial-title">Player Choices</span>
         <span class="tutorial-hint mono small">Click to expand</span>
       </summary>
 
       <div class="tutorial-body">
         <p>
-          Create several inspection rounds. End the game with a summary that
-          comments on how carefully the player applied the rules, not just how
-          fast they finished.
+          Give the player clear choices and let those choices affect what
+          happens next in the game.
         </p>
 
         <p class="mono small">
-          Skills: Arrays or lists · Game states · Multiple endings
+          Skills: Controller buttons · Branching outcomes
         </p>
+
+        <section class="tutorial-video">
+          <h4 class="tutorial-subhead">Video</h4>
+          <div class="video-wrapper" data-video-id="YOUTUBE_ID_STEP_05"></div>
+        </section>
 
         <hr class="tutorial-rule" />
 
         <h4 class="tutorial-subhead">Build Steps</h4>
         <ol class="bullet-list numbered">
-          <li>Create a list/array of story texts.</li>
-          <li>Track the current story index.</li>
-          <li>After each decision, move to the next story.</li>
-          <li>At the end, show a results screen with comments.</li>
+          <li>Assign buttons to actions.</li>
+          <li>Respond differently to each choice.</li>
+          <li>Give feedback for each decision.</li>
         </ol>
-
-        <h4 class="tutorial-subhead">Checkpoint</h4>
-        <ul class="bullet-list">
-          <li>Game plays multiple rounds without breaking.</li>
-          <li>Ending explains performance clearly.</li>
-        </ul>
       </div>
     </details>
   </li>
+
+  <!-- STEP 06 -->
+  <li class="card tutorial-card">
+    <details class="tutorial-details">
+      <summary class="tutorial-summary">
+        <span class="tutorial-tag mono">STEP 06</span>
+        <span class="tutorial-title">Game Flow & Progression</span>
+        <span class="tutorial-hint mono small">Click to expand</span>
+      </summary>
+
+      <div class="tutorial-body">
+        <p>
+          Control how the game moves from one moment to the next so it plays
+          smoothly and predictably.
+        </p>
+
+        <p class="mono small">
+          Skills: Counters · Game states · Sequencing
+        </p>
+
+        <section class="tutorial-video">
+          <h4 class="tutorial-subhead">Video</h4>
+          <div class="video-wrapper" data-video-id="YOUTUBE_ID_STEP_06"></div>
+        </section>
+
+        <hr class="tutorial-rule" />
+
+        <h4 class="tutorial-subhead">Build Steps</h4>
+        <ol class="bullet-list numbered">
+          <li>Track progress with a counter.</li>
+          <li>Move to the next stage after a choice.</li>
+          <li>Prevent actions happening out of order.</li>
+        </ol>
+      </div>
+    </details>
+  </li>
+
+  <!-- STEP 07 -->
+  <li class="card tutorial-card">
+    <details class="tutorial-details">
+      <summary class="tutorial-summary">
+        <span class="tutorial-tag mono">STEP 07</span>
+        <span class="tutorial-title">End State & Reflection</span>
+        <span class="tutorial-hint mono small">Click to expand</span>
+      </summary>
+
+      <div class="tutorial-body">
+        <p>
+          Finish the game with a clear ending that explains what happened
+          and encourages reflection on the player’s decisions.
+        </p>
+
+        <p class="mono small">
+          Skills: End screens · Summary messages
+        </p>
+
+        <section class="tutorial-video">
+          <h4 class="tutorial-subhead">Video</h4>
+          <div class="video-wrapper" data-video-id="YOUTUBE_ID_STEP_07"></div>
+        </section>
+
+        <hr class="tutorial-rule" />
+
+        <h4 class="tutorial-subhead">Build Steps</h4>
+        <ol class="bullet-list numbered">
+          <li>Detect when the game should end.</li>
+          <li>Show a summary message.</li>
+          <li>Explain outcomes clearly.</li>
+        </ol>
+      </div>
+    </details>
+  </li>
+
 </ol>
 
 
