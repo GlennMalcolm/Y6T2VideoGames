@@ -149,7 +149,7 @@
         </p>
       </article>
 
- <ol class="tutorial-list">
+<ol class="tutorial-list">
 
   <!-- STEP 01 -->
   <li class="card tutorial-card">
@@ -175,12 +175,27 @@
           <div class="video-wrapper" data-video-id="dQw4w9WgXcQ"></div>
         </section>
 
+        <details class="teacher-notes">
+          <summary class="teacher-notes-summary">
+            <span class="mono teacher-notes-tag">TEACHER NOTES</span>
+            <span class="mono small teacher-notes-hint">Hidden by default</span>
+          </summary>
+          <div class="teacher-notes-body">
+            <p><strong>Focus:</strong> Movement should feel predictable.</p>
+            <ul class="bullet-list">
+              <li>Common misconception: forgetting collision walls.</li>
+              <li>Quick fix: enable tilemap walls early.</li>
+              <li>Extension: adjust speed for smoother control.</li>
+            </ul>
+          </div>
+        </details>
+
         <hr class="tutorial-rule" />
 
         <h4 class="tutorial-subhead">Build Steps</h4>
         <ol class="bullet-list numbered">
           <li>Create a player sprite.</li>
-          <li>Add movement using the controller.</li>
+          <li>Add controller movement.</li>
           <li>Design a simple game space.</li>
           <li>Add walls or boundaries.</li>
         </ol>
@@ -199,8 +214,8 @@
 
       <div class="tutorial-body">
         <p>
-          Introduce objects the player can interact with. These will later
-          become the core items used in the game.
+          Introduce objects the player can interact with. These become the
+          items inspected in the game.
         </p>
 
         <p class="mono small">
@@ -212,12 +227,27 @@
           <div class="video-wrapper" data-video-id="dQw4w9WgXcQ"></div>
         </section>
 
+        <details class="teacher-notes">
+          <summary class="teacher-notes-summary">
+            <span class="mono teacher-notes-tag">TEACHER NOTES</span>
+            <span class="mono small teacher-notes-hint">Hidden by default</span>
+          </summary>
+          <div class="teacher-notes-body">
+            <p><strong>Focus:</strong> One interaction only.</p>
+            <ul class="bullet-list">
+              <li>Common misconception: adding too many triggers.</li>
+              <li>Quick fix: limit to one object type.</li>
+              <li>Extension: visual feedback on interaction.</li>
+            </ul>
+          </div>
+        </details>
+
         <hr class="tutorial-rule" />
 
         <h4 class="tutorial-subhead">Build Steps</h4>
         <ol class="bullet-list numbered">
           <li>Create an object sprite.</li>
-          <li>Detect when the player touches it.</li>
+          <li>Detect overlap with the player.</li>
           <li>Trigger an action or message.</li>
         </ol>
       </div>
@@ -235,8 +265,8 @@
 
       <div class="tutorial-body">
         <p>
-          Display information clearly on screen so the player knows what is
-          happening and what they are deciding.
+          Display information clearly so the player understands what they
+          are inspecting.
         </p>
 
         <p class="mono small">
@@ -248,13 +278,28 @@
           <div class="video-wrapper" data-video-id="dQw4w9WgXcQ"></div>
         </section>
 
+        <details class="teacher-notes">
+          <summary class="teacher-notes-summary">
+            <span class="mono teacher-notes-tag">TEACHER NOTES</span>
+            <span class="mono small teacher-notes-hint">Hidden by default</span>
+          </summary>
+          <div class="teacher-notes-body">
+            <p><strong>Focus:</strong> Readability over style.</p>
+            <ul class="bullet-list">
+              <li>Common misconception: text appears too briefly.</li>
+              <li>Quick fix: pause gameplay when text appears.</li>
+              <li>Extension: button to dismiss text.</li>
+            </ul>
+          </div>
+        </details>
+
         <hr class="tutorial-rule" />
 
         <h4 class="tutorial-subhead">Build Steps</h4>
         <ol class="bullet-list numbered">
           <li>Show text when an object is activated.</li>
           <li>Store text in a variable.</li>
-          <li>Control when text appears and disappears.</li>
+          <li>Control when text appears.</li>
         </ol>
       </div>
     </details>
@@ -271,8 +316,8 @@
 
       <div class="tutorial-body">
         <p>
-          Add rules that check what is happening in the game and respond
-          differently depending on conditions.
+          Add rules that check information and respond differently
+          depending on conditions.
         </p>
 
         <p class="mono small">
@@ -284,13 +329,28 @@
           <div class="video-wrapper" data-video-id="dQw4w9WgXcQ"></div>
         </section>
 
+        <details class="teacher-notes">
+          <summary class="teacher-notes-summary">
+            <span class="mono teacher-notes-tag">TEACHER NOTES</span>
+            <span class="mono small teacher-notes-hint">Hidden by default</span>
+          </summary>
+          <div class="teacher-notes-body">
+            <p><strong>Focus:</strong> One condition only.</p>
+            <ul class="bullet-list">
+              <li>Common misconception: stacking multiple rules.</li>
+              <li>Quick fix: test with two clear outcomes.</li>
+              <li>Extension: show rule result visually.</li>
+            </ul>
+          </div>
+        </details>
+
         <hr class="tutorial-rule" />
 
         <h4 class="tutorial-subhead">Build Steps</h4>
         <ol class="bullet-list numbered">
           <li>Create a rule using an if statement.</li>
-          <li>Check a value or condition.</li>
-          <li>Trigger different outcomes.</li>
+          <li>Check a value.</li>
+          <li>Trigger outcomes.</li>
         </ol>
       </div>
     </details>
@@ -307,12 +367,12 @@
 
       <div class="tutorial-body">
         <p>
-          Give the player clear choices and let those choices affect what
-          happens next in the game.
+          Give the player choices and let those decisions affect what
+          happens next.
         </p>
 
         <p class="mono small">
-          Skills: Controller buttons · Branching outcomes
+          Skills: Controller buttons · Branching logic
         </p>
 
         <section class="tutorial-video">
@@ -320,13 +380,28 @@
           <div class="video-wrapper" data-video-id="dQw4w9WgXcQ"></div>
         </section>
 
+        <details class="teacher-notes">
+          <summary class="teacher-notes-summary">
+            <span class="mono teacher-notes-tag">TEACHER NOTES</span>
+            <span class="mono small teacher-notes-hint">Hidden by default</span>
+          </summary>
+          <div class="teacher-notes-body">
+            <p><strong>Focus:</strong> Immediate feedback.</p>
+            <ul class="bullet-list">
+              <li>Common misconception: silent outcomes.</li>
+              <li>Quick fix: always show a response message.</li>
+              <li>Extension: sound or animation feedback.</li>
+            </ul>
+          </div>
+        </details>
+
         <hr class="tutorial-rule" />
 
         <h4 class="tutorial-subhead">Build Steps</h4>
         <ol class="bullet-list numbered">
           <li>Assign buttons to actions.</li>
-          <li>Respond differently to each choice.</li>
-          <li>Give feedback for each decision.</li>
+          <li>Respond differently to choices.</li>
+          <li>Give feedback.</li>
         </ol>
       </div>
     </details>
@@ -343,12 +418,11 @@
 
       <div class="tutorial-body">
         <p>
-          Control how the game moves from one moment to the next so it plays
-          smoothly and predictably.
+          Control how the game progresses from one inspection to the next.
         </p>
 
         <p class="mono small">
-          Skills: Counters · Game states · Sequencing
+          Skills: Counters · States · Sequencing
         </p>
 
         <section class="tutorial-video">
@@ -356,13 +430,28 @@
           <div class="video-wrapper" data-video-id="dQw4w9WgXcQ"></div>
         </section>
 
+        <details class="teacher-notes">
+          <summary class="teacher-notes-summary">
+            <span class="mono teacher-notes-tag">TEACHER NOTES</span>
+            <span class="mono small teacher-notes-hint">Hidden by default</span>
+          </summary>
+          <div class="teacher-notes-body">
+            <p><strong>Focus:</strong> Prevent skipping.</p>
+            <ul class="bullet-list">
+              <li>Common misconception: actions trigger twice.</li>
+              <li>Quick fix: disable inputs between states.</li>
+              <li>Extension: visible progress indicator.</li>
+            </ul>
+          </div>
+        </details>
+
         <hr class="tutorial-rule" />
 
         <h4 class="tutorial-subhead">Build Steps</h4>
         <ol class="bullet-list numbered">
           <li>Track progress with a counter.</li>
-          <li>Move to the next stage after a choice.</li>
-          <li>Prevent actions happening out of order.</li>
+          <li>Move to the next item.</li>
+          <li>Prevent actions out of order.</li>
         </ol>
       </div>
     </details>
@@ -379,8 +468,8 @@
 
       <div class="tutorial-body">
         <p>
-          Finish the game with a clear ending that explains what happened
-          and encourages reflection on the player’s decisions.
+          Finish the game with a clear ending that explains outcomes and
+          encourages reflection.
         </p>
 
         <p class="mono small">
@@ -392,19 +481,35 @@
           <div class="video-wrapper" data-video-id="dQw4w9WgXcQ"></div>
         </section>
 
+        <details class="teacher-notes">
+          <summary class="teacher-notes-summary">
+            <span class="mono teacher-notes-tag">TEACHER NOTES</span>
+            <span class="mono small teacher-notes-hint">Hidden by default</span>
+          </summary>
+          <div class="teacher-notes-body">
+            <p><strong>Focus:</strong> Explanation over score.</p>
+            <ul class="bullet-list">
+              <li>Common misconception: ending too abrupt.</li>
+              <li>Quick fix: recap decisions made.</li>
+              <li>Extension: replay option.</li>
+            </ul>
+          </div>
+        </details>
+
         <hr class="tutorial-rule" />
 
         <h4 class="tutorial-subhead">Build Steps</h4>
         <ol class="bullet-list numbered">
-          <li>Detect when the game should end.</li>
+          <li>Detect the end condition.</li>
           <li>Show a summary message.</li>
-          <li>Explain outcomes clearly.</li>
+          <li>Explain decisions clearly.</li>
         </ol>
       </div>
     </details>
   </li>
 
 </ol>
+
 
 
       <section class="card">
