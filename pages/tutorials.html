@@ -19,35 +19,67 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const wrappers = document.querySelectorAll(".video-wrapper");
+    const wrappers = Array.from(document.querySelectorAll(".video-wrapper"));
+    const detailsList = Array.from(document.querySelectorAll(".tutorial-details"));
 
-    wrappers.forEach((w) => {
-      const id = w.dataset.videoId;
-
-      // Render the styled placeholder (fast)
-      w.innerHTML = `
+    function renderOverlay(wrapper) {
+      wrapper.innerHTML = `
         <div class="video-overlay" role="button" aria-label="Play video">
           <span class="video-stamp">▶ PLAY TRAINING</span>
         </div>
       `;
+      wrapper.dataset.loaded = "0";
+    }
 
-      // Load YouTube only when clicked (fast + reliable)
+    function loadVideo(wrapper) {
+      const id = wrapper.dataset.videoId;
+      wrapper.innerHTML = `
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1&modestbranding=1&rel=0"
+          title="Training video"
+          frameborder="0"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+          style="position:absolute; inset:0; width:100%; height:100%;">
+        </iframe>
+      `;
+      wrapper.dataset.loaded = "1";
+    }
+
+    function stopAllVideos(exceptWrapper = null) {
+      wrappers.forEach(w => {
+        if (w === exceptWrapper) return;
+        // If an iframe is present, resetting to overlay stops playback immediately
+        if (w.querySelector("iframe")) renderOverlay(w);
+      });
+    }
+
+    // Initialise all wrappers with overlay + click to load
+    wrappers.forEach(w => {
+      renderOverlay(w);
+
       w.addEventListener("click", () => {
-        w.innerHTML = `
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1&modestbranding=1&rel=0"
-            title="Training video"
-            frameborder="0"
-            allow="autoplay; encrypted-media; picture-in-picture"
-            allowfullscreen
-            loading="lazy"
-            style="position:absolute; inset:0; width:100%; height:100%;">
-          </iframe>
-        `;
-      }, { once: true });
+        // Stop other videos, then load this one
+        stopAllVideos(w);
+        loadVideo(w);
+      });
+    });
+
+    // When a different tutorial step opens, stop any playing videos elsewhere
+    detailsList.forEach(d => {
+      d.addEventListener("toggle", () => {
+        if (d.open) {
+          // Stop all videos not inside this details element
+          wrappers.forEach(w => {
+            if (!d.contains(w) && w.querySelector("iframe")) renderOverlay(w);
+          });
+        }
+      });
     });
   });
 </script>
+
 
 
 <body>
@@ -146,7 +178,7 @@
 
         <section class="tutorial-video">
           <h4 class="tutorial-subhead">Video</h4>
-          <div class="video-wrapper" data-video-id="YOUTUBE_ID_STEP_02"></div>
+          <div class="video-wrapper" data-video-id="dQw4w9WgXcQ"></div>
         </section>
 
         <hr class="tutorial-rule" />
@@ -182,7 +214,7 @@
 
         <section class="tutorial-video">
           <h4 class="tutorial-subhead">Video</h4>
-          <div class="video-wrapper" data-video-id="YOUTUBE_ID_STEP_03"></div>
+          <div class="video-wrapper" data-video-id="dQw4w9WgXcQ"></div>
         </section>
 
         <hr class="tutorial-rule" />
@@ -218,7 +250,7 @@
 
         <section class="tutorial-video">
           <h4 class="tutorial-subhead">Video</h4>
-          <div class="video-wrapper" data-video-id="YOUTUBE_ID_STEP_04"></div>
+          <div class="video-wrapper" data-video-id="dQw4w9WgXcQ"></div>
         </section>
 
         <hr class="tutorial-rule" />
@@ -254,7 +286,7 @@
 
         <section class="tutorial-video">
           <h4 class="tutorial-subhead">Video</h4>
-          <div class="video-wrapper" data-video-id="YOUTUBE_ID_STEP_05"></div>
+          <div class="video-wrapper" data-video-id="dQw4w9WgXcQ"></div>
         </section>
 
         <hr class="tutorial-rule" />
@@ -290,7 +322,7 @@
 
         <section class="tutorial-video">
           <h4 class="tutorial-subhead">Video</h4>
-          <div class="video-wrapper" data-video-id="YOUTUBE_ID_STEP_06"></div>
+          <div class="video-wrapper" data-video-id="dQw4w9WgXcQ"></div>
         </section>
 
         <hr class="tutorial-rule" />
@@ -326,7 +358,7 @@
 
         <section class="tutorial-video">
           <h4 class="tutorial-subhead">Video</h4>
-          <div class="video-wrapper" data-video-id="YOUTUBE_ID_STEP_07"></div>
+          <div class="video-wrapper" data-video-id="dQw4w9WgXcQ"></div>
         </section>
 
         <hr class="tutorial-rule" />
