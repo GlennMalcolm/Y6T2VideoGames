@@ -420,3 +420,56 @@ main {
   text-transform: uppercase;
   color: var(--grey);
 }
+.evidence-controls {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.6rem;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+.evidence-btn {
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--green);
+  background: transparent;
+  color: var(--paper);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  border-radius: var(--radius);
+}
+
+.evidence-btn:hover {
+  background: rgba(62, 95, 74, 0.18);
+}
+
+.evidence-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.evidence-meter {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.evidence-meter-label,
+.evidence-meter-readout {
+  color: #d0cec4;
+}
+
+.evidence-meter-track {
+  height: 8px;
+  border: 1px solid var(--green);
+  background: #050607;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.evidence-meter-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--maroon);
+}
