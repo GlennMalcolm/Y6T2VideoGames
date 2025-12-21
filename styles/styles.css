@@ -576,3 +576,45 @@ main {
   background: var(--maroon);
   color: var(--paper);
 }
+.teacher-notes {
+  margin-top: 0.75rem;
+  border: 1px dashed rgba(62, 95, 74, 0.55);
+  border-radius: var(--radius);
+  background: rgba(62, 95, 74, 0.06);
+}
+
+.teacher-notes-summary {
+  list-style: none;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.65rem 0.75rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.teacher-notes-summary::-webkit-details-marker {
+  display: none;
+}
+
+.teacher-notes-tag {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--green);
+  border-radius: var(--radius);
+  background: rgba(62, 95, 74, 0.10);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  color: #2f4a3a;
+}
+
+.teacher-notes-hint {
+  color: #6a6a62;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.teacher-notes-body {
+  padding: 0 0.75rem 0.75rem;
+}
