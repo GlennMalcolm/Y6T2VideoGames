@@ -547,7 +547,9 @@ main {
   padding-top: 56.25%; /* 16:9 */
   background: #050607;
   border: 1px solid var(--green);
-  margin-top: 0.75rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-top: 0.35rem;
 }
 
 .video-overlay {
@@ -556,21 +558,18 @@ main {
   display: grid;
   place-items: center;
   cursor: pointer;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(0,0,0,0.2),
-    rgba(0,0,0,0.65)
-  );
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.15), rgba(0,0,0,0.70));
 }
 
 .video-stamp {
   border: 2px solid var(--maroon);
-  padding: 0.6rem 1.2rem;
-  font-family: "IBM Plex Mono", monospace;
+  padding: 0.6rem 1.1rem;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
   text-transform: uppercase;
   letter-spacing: 0.16em;
   color: var(--maroon);
   background: rgba(124, 59, 59, 0.08);
+  border-radius: var(--radius);
 }
 
 .video-overlay:hover .video-stamp {
